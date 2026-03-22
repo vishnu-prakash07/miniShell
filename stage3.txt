@@ -1,0 +1,41 @@
+int i = 0;
+
+args[i] = strtok(input, " ");
+
+while (args[i] != NULL) {
+    i++;
+    args[i] = strtok(NULL, " ");
+}
+
+it makes the input array into tokens and stored into args array
+
+eg:
+input="ls -l -s -a"
+
+
+args[0]=strtok(input," "); // returns ls
+
+-input="ls\0-l -s -a"
+
+args[1]=strtok(NULL," "); //returns -l
+
+-input="ls\0-l\0-s -a"
+
+args[2]=strtok(NULL," "); //returns -s
+
+-input="ls\0-l\0-s\0-a"
+
+args[3]=strtok(NULL," "); //returns -a
+
+-input="ls\0-l\0-s\0-a\0"
+
+args[4]=strtok(NULL," "); //returns NULL itslef
+
+now args
+
+args[0]='ls'
+args[1]='-l'
+args[2]='-s'
+args[3]='-a'
+
+

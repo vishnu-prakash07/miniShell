@@ -1,0 +1,12 @@
+# Compiled files
+a.out
+*.out
+*.o
+
+# Logs & temp
+*.log
+*.tmp
+
+# Editor files
+.vscode/
+*.swp
